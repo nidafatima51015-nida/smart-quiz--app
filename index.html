@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Smart Quiz App</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<button id="themeToggle" class="theme-btn">🌙</button>
+
+<div class="app-wrapper">
+
+  <!-- Start Screen -->
+  <div id="start-screen" class="screen active quiz-card">
+    <h1>Smart Quiz App</h1>
+    <p>Test your knowledge 🚀</p>
+    <button id="startBtn">Start Quiz</button>
+  </div>
+
+  <!-- Quiz Screen -->
+  <div id="quiz-screen" class="screen quiz-card">
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+      <div id="progress-bar"></div>
+    </div>
+
+    <div class="top">
+      <span id="progress">1/5</span>
+      <span id="timer">15s</span>
+    </div>
+
+    <h2 id="question">Question here</h2>
+    <div id="options" class="options"></div>
+  </div>
+
+  <!-- Result Screen -->
+  <div id="result-screen" class="screen quiz-card">
+    <h2>Your Result</h2>
+    <p id="score"></p>
+    <button onclick="location.reload()">Restart</button>
+  </div>
+
+</div>
+
+<script src="js/questions.js"></script>
+
+<!-- Confetti library for perfect score celebration -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+<script src="js/app.js"></script>
+</body>
+</html>
